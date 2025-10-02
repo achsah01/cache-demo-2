@@ -27,7 +27,8 @@ jobs:
           key: cache-e7887ea
 
       - name: Echo cache hit/miss
-        run: echo 'Cache hit: ${{ steps.prime-cache-e7887ea.outputs.cache-hit }}'
+        run: |
+          echo "Cache hit: ${{ steps.prime-cache-e7887ea.outputs.cache-hit }}"
 
       - name: Install dependencies
         run: npm ci
